@@ -1,57 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>JavaScript Calculator</title>
-<!--     tailwind css -->
-    <script src="https://cdn.tailwindcss.com"></script>
+  <!--     tailwind css -->
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
+
 <body>
-  <header>
-    <h1 class="text-4xl text-green-700 text-center my-8">JavaScript Calculator</h1>
-  </header>
-  <main>
-    <section class="calculator w-72 mx-auto bg-teal-500">
-        <table class="w-full">
-          <tr>
-            <td colspan="4"><input id="resultField" class="w-full h-24" type="text"></td>
-          </td>
-          <tr>
-            <td width="50" height="50" class="text-center text-2xl p-3 rounded-full bg-teal-700 text-white m-4"><input type="submit" value="C" onclick="clearScreen()"></td>
-            <td class="text-center text-2xl p-3 rounded-full bg-teal-700 text-white m-4"><input type="submit" value="<" onclick="backSpace()"></td>
-            <td class="text-center text-2xl p-3 rounded-full bg-teal-700 text-white m-4"><input type="submit" value="%" onclick="calculate('%')"></td>
-            <td class="text-center text-2xl p-3 rounded-full bg-teal-700 text-white m-4"><input type="submit" value="÷" onclick="calculate('/')"></td>
-          </tr>
-          <tr>
-            <td class="text-center text-2xl p-3 rounded-full bg-teal-700 text-white m-4"><input type="submit" value="7" onclick="calculate('7')"></td>
-            <td class="text-center text-2xl p-3 rounded-full bg-teal-700 text-white m-4"><input type="submit" value="8" onclick="calculate('8')"></td>
-            <td class="text-center text-2xl p-3 rounded-full bg-teal-700 text-white m-4"><input type="submit" value="9" onclick="calculate('9')"></td>
-            <td class="text-center text-2xl p-3 rounded-full bg-teal-700 text-white m-4"><input type="submit" value="*" onclick="calculate('*')"></td>
-          </tr>
-          <tr>
-            <td class="text-center text-2xl p-3 rounded-full bg-teal-700 text-white m-4"><input type="submit" value="4" onclick="calculate('4')"></td>
-            <td class="text-center text-2xl p-3 rounded-full bg-teal-700 text-white m-4"><input type="submit" value="5" onclick="calculate('5')"></td>
-            <td class="text-center text-2xl p-3 rounded-full bg-teal-700 text-white m-4"><input type="submit" value="6" onclick="calculate('6')"></td>
-            <td class="text-center text-2xl p-3 rounded-full bg-teal-700 text-white m-4"><input type="submit" value="-" onclick="calculate('-')"></td>
-          </tr>
-          <tr>
-            <td class="text-center text-2xl p-3 rounded-full bg-teal-700 text-white m-4"><input type="submit" value="1" onclick="calculate('1')"></td>
-            <td class="text-center text-2xl p-3 rounded-full bg-teal-700 text-white m-4"><input type="submit" value="2" onclick="calculate('2')"></td>
-            <td class="text-center text-2xl p-3 rounded-full bg-teal-700 text-white m-4"><input type="submit" value="3" onclick="calculate('3')"></td>
-            <td class="text-center text-2xl p-3 rounded-full bg-teal-700 text-white m-4"><input type="submit" value="+" onclick="calculate('+')"></td>
-          </tr>
-          <tr>
-            <td class="text-center text-2xl p-3 rounded-full bg-teal-700 text-white m-4"><input type="submit" value="" onclick="calculate('')"></td>
-            <td class="text-center text-2xl p-3 rounded-full bg-teal-700 text-white m-4"><input type="submit" value="0" onclick="calculate('0')"></td>
-            <td class="text-center text-2xl p-3 rounded-full bg-teal-700 text-white m-4"><input type="submit" value="." onclick="calculate('.')"></td>
-            <td class="text-center text-2xl p-3 rounded-full bg-teal-700 text-white m-4"><input type="submit" value="=" onclick="totalResult()"></td>
-          </tr>
-        </table>
-    </section>
-  </main>
-  <!-- script file -->
-  <script src="app.js"></script>
+    <header>
+        <h1 class="text-4xl text-green-700 text-center my-8">JavaScript Calculator</h1>
+    </header>
+    <main>
+        <section class="calculator w-72 mx-auto bg-teal-500">
+            <table class="w-full">
+                <tr>
+                    <td colspan="4"><input id="resultField" class="w-full h-24" type="text"></td>
+                </tr>
+                <tr>
+                    <td class="text-center"><input class="rounded-full px-4 py-2 text-2xl bg-white text-teal-900 m-1"
+                      type="submit" value="C" onclick="clearScreen()"></td>
+                    <td class="text-center"><input class="rounded-full px-4 py-2 text-2xl bg-white text-teal-900 m-1"
+                       type="submit" value="<"
+                      onclick="backSpace()"></td>
+                    <td class="text-center"><input class="rounded-full px-4 py-2 text-2xl bg-white text-teal-900 m-1"
+                       type="submit" value="%"
+                      onclick="calculate('%')"></td>
+                    <td class="text-center"><input class="rounded-full px-4 py-2 text-2xl bg-white text-teal-900 m-1"
+                       type="submit" value="÷"
+                      onclick="calculate('/')"></td>
+                </tr>
+                <tr>
+                    <td class="text-center"><input class="rounded-full px-4 py-2 text-2xl bg-white text-teal-900 m-1"
+                       type="submit" value="7"
+                      onclick="calculate('7')"></td>
+                    <td class="text-center"><input class="rounded-full px-4 py-2 text-2xl bg-white text-teal-900 m-1"
+                       type="submit" value="8"
+                      onclick="calculate('8')"></td>
+                    <td class="text-center"><input class="rounded-full px-4 py-2 text-2xl bg-white text-teal-900 m-1"
+                       type="submit" value="9"
+                      onclick="calculate('9')"></td>
+                    <td class="text-center"><input class="rounded-full px-4 py-2 text-2xl bg-white text-teal-900 m-1"
+                       type="submit" value="*"
+                      onclick="calculate('*')"></td>
+                </tr>
+                <tr>
+                    <td class="text-center"><input class="rounded-full px-4 py-2 text-2xl bg-white text-teal-900 m-1"
+                       type="submit" value="4"
+                      onclick="calculate('4')"></td>
+                    <td class="text-center"><input class="rounded-full px-4 py-2 text-2xl bg-white text-teal-900 m-1"
+                       type="submit" value="5"
+                      onclick="calculate('5')"></td>
+                    <td class="text-center"><input class="rounded-full px-4 py-2 text-2xl bg-white text-teal-900 m-1"
+                       type="submit" value="6"
+                      onclick="calculate('6')"></td>
+                    <td class="text-center"><input class="rounded-full px-4 py-2 text-2xl bg-white text-teal-900 m-1"
+                       type="submit" value="-"
+                      onclick="calculate('-')"></td>
+                </tr>
+                <tr>
+                    <td class="text-center"><input class="rounded-full px-4 py-2 text-2xl bg-white text-teal-900 m-1"
+                       type="submit" value="1"
+                      onclick="calculate('1')"></td>
+                    <td class="text-center"><input class="rounded-full px-4 py-2 text-2xl bg-white text-teal-900 m-1"
+                       type="submit" value="2"
+                      onclick="calculate('2')"></td>
+                    <td class="text-center"><input class="rounded-full px-4 py-2 text-2xl bg-white text-teal-900 m-1"
+                       type="submit" value="3"
+                      onclick="calculate('3')"></td>
+                    <td class="text-center"><input class="rounded-full px-4 py-2 text-2xl bg-white text-teal-900 m-1"
+                       type="submit" value="+"
+                      onclick="calculate('+')"></td>
+                </tr>
+                <tr>
+                    <td class="text-center"><input class="rounded-full px-4 py-2 text-2xl bg-white text-teal-900 m-1"
+                       type="submit" value=""
+                      onclick="calculate('')"></td>
+                    <td class="text-center"><input class="rounded-full px-4 py-2 text-2xl bg-white text-teal-900 m-1"
+                       type="submit" value="0"
+                      onclick="calculate('0')"></td>
+                    <td class="text-center"><input class="rounded-full px-4 py-2 text-2xl bg-white text-teal-900 m-1"
+                       type="submit" value="."
+                      onclick="calculate('.')"></td>
+                    <td class="text-center"><input class="rounded-full px-4 py-2 text-2xl bg-white text-teal-900 m-1"
+                       type="submit" value="="
+                      onclick="totalResult()"></td>
+                </tr>
+            </table>
+        </section>
+    </main>
+    <!-- script file -->
+    <script src="app.js"></script>
 </body>
 </html>
